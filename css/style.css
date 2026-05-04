@@ -11,10 +11,10 @@
   --accent: #11D494;
   
   /* Tons de Fundo e Superfícies */
-  --bg-color: #F4F7F6;
+  --bg-color: #F0F2F5; /* Cinza claro estilo WP */
   --surface: #FFFFFF;
-  --surface-glass: rgba(255, 255, 255, 0.7);
-  --border-glass: rgba(255, 255, 255, 0.3);
+  --surface-alt: #F8F9FA;
+  --border-color: #E2E8E6;
   
   /* Textos */
   --text-main: #1A201E;
@@ -79,10 +79,8 @@ img {
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background: var(--surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-color);
   z-index: 1000;
   transition: var(--transition);
 }
@@ -254,8 +252,29 @@ img {
 
 .hero p {
   font-size: 1.2rem;
-  color: var(--text-muted);
+  color: inherit;
+  opacity: 0.9;
   margin-bottom: 2.5rem;
+}
+
+/* Background Utilities */
+.bg-dark {
+  background-color: var(--primary-dark);
+  color: white;
+}
+.bg-dark h1, .bg-dark h2, .bg-dark h3 {
+  color: white;
+}
+.bg-dark .text-muted {
+  color: rgba(255,255,255,0.7);
+}
+
+.bg-light {
+  background-color: var(--bg-color);
+}
+
+.bg-white {
+  background-color: var(--surface);
 }
 
 .hero-buttons {
@@ -303,59 +322,46 @@ img {
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-/* Glass Cards */
-.glass-card {
-  background: var(--surface-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
+/* Solid Cards (Estilo WP) */
+.solid-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: var(--transition);
   height: 100%;
 }
 
-.glass-card:hover {
+.solid-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(24, 184, 130, 0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-color: var(--primary-light);
 }
 
-.glass-card h3 {
+.solid-card h3 {
   font-size: 1.5rem;
   color: var(--text-main);
   margin-bottom: 1rem;
 }
 
-/* Overlap Banner (Design Forte) */
-.overlap-banner {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  color: white;
-  border-radius: var(--radius-lg);
-  padding: 4rem 3rem;
-  margin-top: -100px;
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 20px 50px rgba(3, 39, 24, 0.4);
+/* Banner Citação */
+.quote-banner {
   text-align: center;
-  border-bottom: 6px solid var(--secondary);
+  max-width: 900px;
+  margin: 0 auto;
 }
-
-.overlap-banner h2 {
+.quote-banner h2 {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  color: white;
-  letter-spacing: -1px;
+  color: var(--primary-dark);
 }
-
-.overlap-banner p {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
+.quote-banner p {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
 /* Content Layouts */
