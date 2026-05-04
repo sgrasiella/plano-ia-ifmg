@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Cores Principais - Tons de Verde Esmeralda (IFMG moderno) */
-  --primary: #0F7A55;
-  --primary-light: #18B882;
-  --primary-dark: #0A5239;
+  /* Cores Principais - Tons mais escuros e vibrantes (Alto Impacto) */
+  --primary: #0A8754; 
+  --primary-light: #14B877;
+  --primary-dark: #032718;
   
   /* Secundárias e Acentos */
-  --secondary: #E3352F; /* Vermelho IFMG para destaques sutis */
-  --accent: #25C9A4;
+  --secondary: #D92525; /* Vermelho mais forte */
+  --accent: #11D494;
   
-  /* Tons de Fundo e Superfícies (Modo Light elegante) */
-  --bg-color: #F8FAF9;
+  /* Tons de Fundo e Superfícies */
+  --bg-color: #F4F7F6;
   --surface: #FFFFFF;
   --surface-glass: rgba(255, 255, 255, 0.7);
   --border-glass: rgba(255, 255, 255, 0.3);
@@ -237,11 +237,12 @@ img {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 3.8rem;
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: var(--primary-dark);
+  letter-spacing: -1px;
 }
 
 .hero .gradient-text {
@@ -281,9 +282,11 @@ img {
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 800;
   color: var(--primary-dark);
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 .section-header p {
@@ -323,6 +326,36 @@ img {
   font-size: 1.5rem;
   color: var(--text-main);
   margin-bottom: 1rem;
+}
+
+/* Overlap Banner (Design Forte) */
+.overlap-banner {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 20px 50px rgba(3, 39, 24, 0.4);
+  text-align: center;
+  border-bottom: 6px solid var(--secondary);
+}
+
+.overlap-banner h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.overlap-banner p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
 }
 
 /* Content Layouts */
